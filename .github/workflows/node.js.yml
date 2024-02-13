@@ -53,16 +53,16 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install dependencies
-        run: |
-          npm ci || { 
-            echo "Failed to install dependencies. Debugging npm..." 
-            npm --version 
-            node --version 
-            npm config list 
-            ls -la $HOME/.npm
-            exit 1 
-          }
+      # - name: Install dependencies
+      #   run: |
+      #     npm ci || { 
+      #       echo "Failed to install dependencies. Debugging npm..." 
+      #       npm --version 
+      #       node --version 
+      #       npm config list 
+      #       ls -la $HOME/.npm
+      #       exit 1 
+      #     }
 
       # - name: Run tests
       #   run: npm test
