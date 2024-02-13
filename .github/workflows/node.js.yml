@@ -30,7 +30,6 @@
 #     # - run: npm run build --if-present
 #     - run: npm test
 
-# .github/workflows/main.yml
 name: Node.js CI
 
 on:
@@ -55,9 +54,18 @@ jobs:
           node-version: '14'
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci || { 
+            echo "Failed to install dependencies. Debugging npm..." 
+            npm --version 
+            node --version 
+            npm config list 
+            ls -la $HOME/.npm
+            exit 1 
+          }
 
-      # - name: Run tests
-      #   run: npm test
+      - name: Run tests
+        run: npm test
+
 
     
