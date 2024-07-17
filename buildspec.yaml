@@ -6,7 +6,7 @@ phases:
     #   nodejs: 14
     commands:
       - echo Installing dependencies...
-      - n 14.18.3
+      - n 20.11.1
       - npm install
   pre_build:
     commands:
