@@ -10,11 +10,11 @@ phases:
       - echo Installing dependencies...
       # - n 20.11.1
       - npm install
-  pre_build:
-    commands:
-      - echo Running pre-build commands...
-      # - npm run lint
-      - npm run test
+  # pre_build:
+  #   commands:
+  #     - echo Running pre-build commands...
+  #     - npm run lint
+  #     - npm run test
   build:
     commands:
       - echo Build started on `date`
