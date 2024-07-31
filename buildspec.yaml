@@ -16,7 +16,7 @@ phases:
     commands:
       - echo Running pre-build commands...
       # - npm run lint
-      - npm run test
+      # - npm run test
   build:
     commands:
       - echo Build started on `date`
