@@ -1,14 +1,14 @@
 version: 0.2
-env:
+# env:
   # variables:
     # DOCKER_REGISTRY_USERNAME: "harshavarthini28"
     # DOCKER_REGISTRY_PASSWORD: "Harsha#1234"
     # DOCKER_REGISTRY_URL: "docker.io"
     
-   PARAMETER_STORE:
-    DOCKER_REGISTRY_USERNAME: /myapp/docker-credentials/username
-    DOCKER_REGISTRY_PASSWORD: /myapp/docker-credentials/password
-    DOCKER_REGISTRY_URL: /myapp/docker-registry/url
+PARAMETER_STORE:
+  DOCKER_REGISTRY_USERNAME: /myapp/docker-credentials/username
+  DOCKER_REGISTRY_PASSWORD: /myapp/docker-credentials/password
+  DOCKER_REGISTRY_URL: /myapp/docker-registry/url
 
 phases:
   install:
